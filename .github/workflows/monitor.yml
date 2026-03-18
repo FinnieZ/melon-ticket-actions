@@ -26,4 +26,4 @@ jobs:
         env:
           PRODUCT_ID: "123456"
           SCHEDULE_ID: "789012"
-        run: npm start
+        run: node index.js  # 直接运行 index.js
