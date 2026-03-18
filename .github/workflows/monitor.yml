@@ -23,7 +23,7 @@ jobs:
       - name: Run monitor
         uses: ./
         with:
-          product-id: "212702"      # 这里填真实的商品ID
-          schedule-id: "100001"      # 这里填真实的场次ID
-          seat-id: "681,785,786,787,788,789,697,698,699,700"    # 如果需要指定座位
-    
+          product-id: "212702"
+          schedule-id: "100001"
+          seat-id: "681,785,786,787,788,789,697,698,699,700"
+          slack-incoming-webhook-url: ${{ secrets.SLACK_WEBHOOK }}
