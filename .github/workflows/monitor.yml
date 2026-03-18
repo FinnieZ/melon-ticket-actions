@@ -25,5 +25,5 @@ jobs:
         with:
           product-id: "212702"
           schedule-id: "100001"
-          seat-id: "681"
+          seat-id: "1044"
           slack-incoming-webhook-url: ${{ secrets.SLACK_WEBHOOK }}
