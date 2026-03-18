@@ -18,12 +18,12 @@ jobs:
           node-version: '16'
           
       - name: Install dependencies
-        run: |
-          npm install
-          npm run build  # 增加编译步骤
-          
+        run: npm install
+        
       - name: Run monitor
-        env:
-          PRODUCT_ID: "123456"
-          SCHEDULE_ID: "789012"
-        run: node index.js  # 直接运行 index.js
+        uses: ./
+        with:
+          product-id: "212702"      # 这里填真实的商品ID
+          schedule-id: "100001"      # 这里填真实的场次ID
+          seat-id: "681,785,786,787,788,789,697,698,699,700"    # 如果需要指定座位
+    
