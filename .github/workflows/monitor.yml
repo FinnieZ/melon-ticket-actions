@@ -10,18 +10,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         
       - name: Setup Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
-          node-version: '14'
+          node-version: '16'
           
       - name: Install dependencies
-        run: npm install
-        
+        run: |
+          npm install
+          npm run build  # 增加编译步骤
+          
       - name: Run monitor
         env:
-          PRODUCT_ID: "123456"  # 这里先填测试ID
-          SCHEDULE_ID: "789012"  # 这里先填测试ID
+          PRODUCT_ID: "123456"
+          SCHEDULE_ID: "789012"
         run: npm start
